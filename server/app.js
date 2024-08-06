@@ -6,6 +6,7 @@ dotenv.config();
 // Routes
 import userRoutes from "./Routes/User.Routes.js";
 import { btbConnection } from "./Config/DB.Connection.js";
+import ticketsRoutes from "./Routes/Ticket.Routes.js";
 
 // App
 const app = express();
@@ -22,6 +23,7 @@ app.use(urlencoded({ extended: true }));
 
 // API Routes
 app.use("/api/users", userRoutes);
+app.use("/api/tickets", ticketsRoutes);
 
 // Server
 app.listen(port, () => {
