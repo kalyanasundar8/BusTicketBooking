@@ -67,4 +67,23 @@ const createBus = async (req, res) => {
   }
 };
 
-export { createBus };
+// Request      GET
+// Route        /api/buses/getBus
+// Description  Getting bus
+const getBus = async (req, res) => {
+  const { source, destination, date } = req.body;
+
+  const busExists = await bus.find({
+    source: source,
+    destination: destination,
+    date: date,
+  });
+
+  if (busExists.length === 0) {
+    return res.status(400).json({ message: "No bus found!" });
+  }
+
+  return res.status(200).json(busExists);
+};
+
+export { createBus, getBus };

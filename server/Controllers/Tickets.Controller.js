@@ -46,4 +46,13 @@ const bookTicket = async (req, res) => {
   }
 };
 
+// Request      GET
+// Route        /api/tickets/bookedTicket
+// Description  Get booked tickets
+const getBookedTickets = async (req, res) => {
+  const { busId } = req.body;
+
+  
+}
+
 export { bookTicket };

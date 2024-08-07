@@ -1,6 +1,7 @@
 const generateAlphabet = (length) => {
+  let i;
   const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-  const character = "";
+  let character = "";
   const charLength = characters.length;
   for (i = 0; i < length; i++) {
     const randomIndex = Math.floor(Math.random() * charLength);

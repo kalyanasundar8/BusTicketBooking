@@ -27,12 +27,8 @@ const ticketSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    busNumber: {
-      type: String,
-      required: true,
-    },
-    busName: {
-      type: String,
+    busId: {
+      type: mongoose.Schema.Types.ObjectId,
       required: true,
     },
     date: {
